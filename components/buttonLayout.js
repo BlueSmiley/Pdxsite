@@ -1,4 +1,4 @@
-import styles from './button-layout.module.css'
+import styles from './buttonLayout.module.css'
 import React from 'react'
 
 export default class ButtonGroup extends React.Component {
@@ -8,7 +8,7 @@ export default class ButtonGroup extends React.Component {
 
     renderButton(text, i) {
         const buttonStyle = (this.props.activeButton != i) ?
-            styles.btnSimple:styles.btnSelected;
+            styles.btnSimple:styles.btnSimpleSelected;
         return (
             <Button 
                 key={text}

@@ -1,0 +1,19 @@
+.graphCenterLayout {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+.graphTopLayout {
+    padding: 0 0 0 10em;
+    margin: 1em 1em 1em 0
+}
+
+.graphLeftColumnLayout {
+    margin: 1em 0em 3em 0em;
+}
+
+.graphDisplayLayout {
+    width: stretch;
+    margin: 1em 2em 3em 1em;
+}

@@ -1,4 +1,4 @@
-import styles from './graph-display.module.css'
+import styles from './graphDisplay.module.css'
 
 export default function Graph(props) {
     if (props.graphImage != null) {

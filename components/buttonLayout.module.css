@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0.25rem;
-    margin: 0.5rem;
+    padding: 0.1rem;
 }
 
 .containerColumn{
@@ -11,10 +10,11 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    padding: 0.25rem;
-    margin: 0.5rem;
+    height: 100%;
+    padding: 0.1rem;
 }
 
+/* Button design to select between different options to display*/
 .btnSimple {
     border: 0;
     border-radius: 0.25rem;
@@ -23,14 +23,13 @@
     font-size: 150%;
     white-space: nowrap;
     padding: 0.25rem 0.5rem;
-    margin: 0.25rem;
 }
 
 .btnSimple:hover {
     background: grey;
 }
 
-.btnSelected {
+.btnSimpleSelected {
     border: 0;
     border-radius: 0.25rem;
     background:darkgrey;
@@ -38,5 +37,4 @@
     font-size: 150%;
     white-space: nowrap;
     padding: 0.25rem 0.5rem;
-    margin: 0.25rem;
 }

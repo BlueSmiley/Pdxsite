@@ -1,11 +1,23 @@
-.displayArea {
-  display: flex;
-  flex-direction: row;
-  padding-left: 7%;
-  align-content: space-around;
-  width: 100%
+.centerDisplayLayout {
+  width: 95%;
+  margin: 2em 0 0 1em;
 }
 
-.buttonGroupRow {
-  padding-left: 15%;
+.navbarLayout {
+  margin: 1em 0 1em 1em
+}
+
+.centerContainerLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 100%;
+}
+
+.contentArea {
+  width: 100%;
+}
+
+.emptyPage {
+  height: 100%;
 }

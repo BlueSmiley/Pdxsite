@@ -1,13 +1,10 @@
 .graphContainer {
-    margin: 2rem;
-    padding: 0;
-    border: 0.1rem;
+    border: 0.1rem solid;
     width: 100%;
-    height: auto;
 }
 
 .graphImage {
+    display: block;
     width: 100%;
-    height: auto;
     background-size: contain;
 }
