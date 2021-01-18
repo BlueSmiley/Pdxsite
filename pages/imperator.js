@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Page() {
     return (
-        <div className={styles.emptyPage}>
+        <div className={styles.pageWrapper}>
             <main className={styles.centerContainerLayout}>
                 <Sidebar
                     paths={[

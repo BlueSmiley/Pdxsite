@@ -1,10 +1,23 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Sidebar from '../components/sidebar';
+import { useQuery, gql } from "@apollo/client"
+
+const GameNamesQuery = gql`
+    query GameNames {
+        games
+        {
+          name
+        }
+    }
+`;
 
 export default function Home() {
+    const {data, error, loading} = useQuery(GameNamesQuery);
+    const gameNames = error? ["Error loading"] : (loading? [] : data);
+
     return (
-        <div className={styles.emptyPage}>
+        <div className={styles.pageWrapper}>
             <Head>
                 <title>Paradox campaign visualisor</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -20,7 +33,9 @@ export default function Home() {
                     ]}
                     links={["./eu4", "./ck2", "./ck3", "./stellaris", "./imperator"]}
                 />
-                <h1>Select a campaign from the sidebar to view it</h1>
+                {gameNames.games.map((game) => {
+                    return <h1>{game.name}</h1>
+                })}
             </main>
         </div>
     )

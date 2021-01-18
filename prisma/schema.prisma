@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl"]
+}
+
+model Game {
+  id         Int         @default(autoincrement()) @id
+  name       String      @unique
+  campaigns  Campaign[]
+}
+
+model Campaign {
+  id      Int         @default(autoincrement()) @id
+  name    String      @unique
+  stats   Statistic[]
+}
+
+model Statistic {
+  id      Int         @default(autoincrement()) @id
+  name    String      @unique
+  visualisations  Visualisation[]
+}
+
+model Visualisation {
+  id      Int         @default(autoincrement()) @id
+  timeRange   String
+  imageURL    String?
+}

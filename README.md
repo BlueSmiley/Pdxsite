@@ -16,5 +16,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployment
 
-Current deployment is on an ec2 instance which follows the above steps and pulls the git repo
+Current deployment is on an ec2 instance which pulls the git repo and follows the steps above.
 The site can then be accesed using the domain address pdxgraphs.me

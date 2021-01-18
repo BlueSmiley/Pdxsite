@@ -1,9 +1,17 @@
 version: "3"
 
 services:
-  nextjs:
+  prod:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ./
+      target: prod
     ports:
       - "3000:3000"
+  dev:
+    build:
+      context: ./
+      target: dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app

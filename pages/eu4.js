@@ -94,37 +94,35 @@ const imagePaths =
 
 export default function Home() {
     return (
-        <div>
+        <div className={styles.pageWrapper}>
             <Head>
                 <title>Paradox campaign visualisor</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
-                <div className={styles.centerContainerLayout}>
-                    <Sidebar
-                        paths={[
-                            "Europa Universalis 4", 
-                            "Crusader Kings 2",
-                            "Crusader Kings 3",
-                            "Stellaris",
-                            "Imperator Rome"
-                        ]}
-                        links={["./eu4", "./ck2", "./ck3", "./stellaris", "./imperator"]}
-                    />
-                    <div className={styles.contentArea}>
-                        <div className={styles.navbarLayout}>
-                            <Navbar
-                                paths={["Home", "Europa Universalis"]}
-                                links={["/", "./eu4"]}
-                            />
-                        </div>
-                        <div className={styles.centerDisplayLayout}>
-                            <GraphDisplayManager
-                                columnButtonNames={columnButtonNames}
-                                rowButtonNames={rowButtonNames}
-                                images={imagePaths}
-                            />
-                        </div>
+            <main className={styles.centerContainerLayout}>
+                <Sidebar
+                    paths={[
+                        "Europa Universalis 4", 
+                        "Crusader Kings 2",
+                        "Crusader Kings 3",
+                        "Stellaris",
+                        "Imperator Rome"
+                    ]}
+                    links={["./eu4", "./ck2", "./ck3", "./stellaris", "./imperator"]}
+                />
+                <div className={styles.contentArea}>
+                    <div className={styles.navbarLayout}>
+                        <Navbar
+                            paths={["Home", "Europa Universalis"]}
+                            links={["/", "./eu4"]}
+                        />
+                    </div>
+                    <div className={styles.centerDisplayLayout}>
+                        <GraphDisplayManager
+                            columnButtonNames={columnButtonNames}
+                            rowButtonNames={rowButtonNames}
+                            images={imagePaths}
+                        />
                     </div>
                 </div>
             </main>
